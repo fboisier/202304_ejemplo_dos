@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block titulo %}Bienvenidos al Login{% endblock %}
+
+{% block contenido %}
+
+
+<div class="row mt-4">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <h2>Registrate INICIO!!!</h2>
+        <form action="/procesar_registro" method="post">
+
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" required class="form-control" id="nombre" name="nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" required class="form-control" id="apellido" name="apellido">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                <div id="emailHelp" class="form-text">No compartas la clave con nadie.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" name="confirm_password">
+            </div>
+            <button type="submit" class="btn btn-success">Registrar!</button>
+        </form>
+    </div>
+
+
+    <div class="offset-lg-2 col-lg-4 col-md-6 col-sm-12">
+        <h2>Ingresa al sistema</h2>
+        <form action="/procesar_login" method="post">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail2" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="email">
+                <div id="emailHelp" class="form-text">No compartas la clave con nadie.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword3" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword3" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar al Sistema!</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
